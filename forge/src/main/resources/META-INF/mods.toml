@@ -1,0 +1,39 @@
+modLoader = "javafml"
+loaderVersion = "[47,)"
+issueTrackerURL = "https://github.com/TCBuildMC/BlockyCooking/issues"
+license = "Apache-2.0"
+
+[[mods]]
+modId = "blockycooking"
+version = "${version}"
+displayName = "BlockyCooking Mod"
+displayURL = "https://github.com/TCBuildMC/BlockyCooking"
+authors = "TCBuildMC"
+credits = "Block_Mrlimr267"
+description = '''
+A Minecraft mod about farming and cooking.
+
+Be based on the vanilla Minecraft :(
+'''
+logoFile = "icon.png"
+
+[[dependencies.blockycooking]]
+modId = "forge"
+mandatory = true
+versionRange = "[47,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.blockycooking]]
+modId = "minecraft"
+mandatory = true
+versionRange = "[1.20, 1.21)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.blockycooking]]
+modId = "architectury"
+mandatory = true
+versionRange = "[0,)"
+ordering = "AFTER"
+side = "BOTH"

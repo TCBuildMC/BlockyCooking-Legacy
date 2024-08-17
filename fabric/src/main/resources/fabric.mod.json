@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "blockycooking",
+  "version": "${version}",
+  "name": "BlockyCooking Mod",
+  "description": "A Minecraft mod about farming and cooking. Be based on the vanilla Minecraft :(",
+  "authors": [
+    "TCBuildMC"
+  ],
+  "contributors": [
+    "Block_Mrlimr267"
+  ],
+  "contact": {
+    "homepage": "https://github.com/TCBuildMC",
+    "sources": "https://github.com/TCBuildMC/BlockyCooking",
+    "issues": "https://github.com/TCBuildMC/BlockyCooking/issues"
+  },
+  "license": "Apache-2.0",
+  "icon": "icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "xyz.tcbuildmc.minecraft.mod.blockycooking.fabric.BlockyCookingFabric::onInitialize"
+    ],
+    "client": [
+      "xyz.tcbuildmc.minecraft.mod.blockycooking.fabric.BlockyCookingFabric::onInitializeClient"
+    ],
+    "fabric-datagen": [
+      "xyz.tcbuildmc.minecraft.mod.blockycooking.fabric.data.BlockCookingFabricDatagen"
+    ]
+  },
+  "mixins": [
+    "blockycooking.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.15",
+    "fabric": "*",
+    "minecraft": "1.20.x",
+    "architectury": "*"
+  }
+}

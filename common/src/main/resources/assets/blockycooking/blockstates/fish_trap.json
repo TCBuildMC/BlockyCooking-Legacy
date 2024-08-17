@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "blockycooking:block/fish_trap",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "blockycooking:block/fish_trap"
+    },
+    "facing=south": {
+      "model": "blockycooking:block/fish_trap",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "blockycooking:block/fish_trap",
+      "y": 270
+    }
+  }
+}
