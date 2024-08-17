@@ -1,6 +1,8 @@
 name: Feature request
 description: Suggest an idea for BlockyCooking mod.
 title: "[Feature] <your title>"
+labels:
+  - enhancement
 body:
   - type: markdown
     attributes:
