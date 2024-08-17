@@ -1,0 +1,113 @@
+name: Bug Report
+description: Report a bug of BlockyCooking mod.
+title: "[Bug][<Minecraft version>] <your title>"
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Try uninstalling Optifine mod first, because of its worse compatibility.
+        
+        Please use the latest build of BlockyCooking mod. Your bug might be fixed in the latest build.
+        
+        You can find builds [here](https://github.com/TCBuildMC/BlockyCooking/actions?query=event%3Apush).
+        
+        Before reporting your bug, make sure your bug was not reported or is similar to other bugs.
+
+  - type: checkboxes
+    attributes:
+      label: Make sure you have done these things
+      description: These checks might resolve some bugs.
+      options:
+        - label: BlockyCooking is up to date, and my bug have not been fixed.
+        - label: All dependencies are installed.
+          required: true
+        - label: Other mods and the Loader is up to date.
+          required: true
+        - label: Optifine is not installed.
+          required: true
+        - label: My bug was not reported or is not similar to other bugs.
+          required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: BlockyCooking Version
+      description: See your logs, the version should be printed.
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: OS and Java version
+      description: Type `java --version` in the command line (CMD, Powershell, Linux console, etc.)
+      placeholder: |
+        OS: Windows 11
+        
+        Java: "openjdk 21.0.1 2023-10-17 LTS"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description
+      description: >-
+        Please include as much information as possible. 
+        
+        For the description, assume we have no idea how mods work, be as detailed as possible and include a step by step reproduction. 
+        
+        It is recommended you try to reproduce the issue you are having yourself with as few mods as possible. 
+        
+        The clearer the description, the higher the report processing priority.
+      placeholder: |
+        Detailed information about what should(not) happen
+        
+        Example:
+        
+            Actual:
+        
+                ...
+        
+            Expected: 
+        
+                ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Reproduction Steps
+      description: Steps to reproduce the bug.
+      placeholder: |
+        1. Install ...
+        
+        2. Open Minecraft
+        
+        3. ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: log
+    attributes:
+      label: Log File/ Crash Report
+      description: >-
+        Logs can be found in /logs/latest.log
+        
+        Crash Reports can be found in /crash-reports
+        
+        After client/ server is stopped, drag log file or crash report below or upload it to https://paste.ubuntu.com/ or https://mclo.gs/
+        
+        **DO NOT PASTE YOUR LOG OR CRASH REPORT DIRECTLY HERE**
+      placeholder: Drag log file here to upload or external pastebin link.
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Additional Context
+      description: Other information
+      placeholder: any other context about the problem here.

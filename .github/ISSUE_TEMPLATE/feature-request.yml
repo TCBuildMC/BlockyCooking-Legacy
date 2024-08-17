@@ -1,0 +1,52 @@
+name: Feature request
+description: Suggest an idea for BlockyCooking mod.
+title: "[Feature] <your title>"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please use the latest build of BlockyCooking mod. Your feature might be implemented in the latest build.
+
+        You can find builds [here](https://github.com/TCBuildMC/BlockyCooking/actions?query=event%3Apush).
+
+        Before requesting your feature, make sure your feature was not requested or is similar to other features.
+
+  - type: checkboxes
+    attributes:
+      label: Make sure you have done these things
+      description: These checks can filter the unimplemented features.
+      options:
+        - label: BlockyCooking is up to date, and my feature have not been implemented.
+        - label: My feature was not requested or is not similar to other features.
+          required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Feature Description
+      description: >-
+        Please include as much information as possible. 
+
+        For the description, assume we have no idea how mods work, be as detailed as possible. 
+
+        The clearer the description, the higher the request processing priority.
+      placeholder: |
+        What is the feature?
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Possible Solution (Optional, but Recommended)
+      description: Steps to implement your feature.
+      placeholder: |
+        1. ...
+        2. ...
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Additional Context
+      description: Other information
+      placeholder: any other context about the problem here.
