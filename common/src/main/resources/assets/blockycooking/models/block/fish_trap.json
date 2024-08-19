@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:block/orientable",
   "textures": {
-    "front": "blockycooking:block/fish_trap",
+    "front": "blockycooking:block/fish_trap_front",
     "side": "blockycooking:block/fish_trap_side",
     "top": "blockycooking:block/fish_trap_top"
   }

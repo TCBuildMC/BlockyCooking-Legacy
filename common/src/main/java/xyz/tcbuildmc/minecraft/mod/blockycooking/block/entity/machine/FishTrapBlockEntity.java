@@ -13,6 +13,8 @@ import net.minecraft.loot.context.LootContextParameters;
 import net.minecraft.loot.context.LootContextTypes;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.state.property.Properties;
 import net.minecraft.text.Text;
 import net.minecraft.util.collection.DefaultedList;
@@ -21,12 +23,13 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
-import xyz.tcbuildmc.minecraft.mod.blockycooking.block.ModBlockEntityTypes;
+import xyz.tcbuildmc.minecraft.mod.blockycooking.block.entity.ModBlockEntityTypes;
+import xyz.tcbuildmc.minecraft.mod.blockycooking.block.entity.InventoryBlockEntity;
 import xyz.tcbuildmc.minecraft.mod.blockycooking.item.ModItems;
 import xyz.tcbuildmc.minecraft.mod.blockycooking.screen.FishTrapScreenHandler;
 import xyz.tcbuildmc.minecraft.mod.blockycooking.tag.ModTags;
 
-public class FishTrapBlockEntity extends MachineBlockEntity {
+public class FishTrapBlockEntity extends GUIBlockEntity {
     private final int inventorySize = 10;
     private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(this.inventorySize, ItemStack.EMPTY);
 
@@ -65,7 +68,7 @@ public class FishTrapBlockEntity extends MachineBlockEntity {
     }
 
     @Override
-    public void tick(World world, BlockPos pos, BlockState state, MachineBlockEntity blockEntity) {
+    public void tick(World world, BlockPos pos, BlockState state, InventoryBlockEntity blockEntity) {
         if (world.isClient()) {
             return;
         }
@@ -98,17 +101,35 @@ public class FishTrapBlockEntity extends MachineBlockEntity {
             if (baitStack.isIn(ModTags.FISH_TRAP_BAITS)) {
                 if (baitStack.isIn(ModTags.BREAD_CRUMBS)) {
                     lootTable = ((ServerWorld) world).getServer().getLootManager().getLootTable(LootTables.FISHING_FISH_GAMEPLAY);
+
+                    if (random.nextInt(90) >= 30) {  // 1/3
+                        return;
+                    }
                 } else if (baitStack.isOf(ModItems.TREASURE_WEB.get())) {
                     lootTable = ((ServerWorld) world).getServer().getLootManager().getLootTable(LootTables.FISHING_TREASURE_GAMEPLAY);
+
+                    if (random.nextInt(100) >= 20) {  // 1/5
+                        return;
+                    }
                 } else {
                     lootTable = ((ServerWorld) world).getServer().getLootManager().getLootTable(LootTables.FISHING_GAMEPLAY);
+
+                    if (random.nextInt(50) >= 25) {  // 1/2
+                        return;
+                    }
                 }
 
                 baitStack.decrement(1);
-                super.setStack(0, baitStack);
+//                super.setStack(0, baitStack);
             } else {
                 lootTable = ((ServerWorld) world).getServer().getLootManager().getLootTable(LootTables.FISHING_GAMEPLAY);
+
+                if (random.nextInt(50) >= 25) {  // 1/2
+                    return;
+                }
             }
+
+            world.playSound(null, pos, SoundEvents.ENTITY_FISHING_BOBBER_SPLASH, SoundCategory.BLOCKS, 1.0f, 1.0f);
 
             // refer to https://github.com/Snownee/SnowRealMagic/issues/162
             ObjectArrayList<ItemStack> loots = lootTable.generateLoot(new LootContextParameterSet.Builder((ServerWorld) world)
@@ -144,7 +165,7 @@ public class FishTrapBlockEntity extends MachineBlockEntity {
                 }
             }
 
-            this.markDirty();
+            markDirty(world, pos, state);
         }
     }
 }

@@ -1,4 +1,4 @@
-package xyz.tcbuildmc.minecraft.mod.blockycooking.block;
+package xyz.tcbuildmc.minecraft.mod.blockycooking.block.entity;
 
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
@@ -7,6 +7,7 @@ import net.minecraft.datafixer.TypeReferences;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Util;
 import xyz.tcbuildmc.minecraft.mod.blockycooking.BlockyCooking;
+import xyz.tcbuildmc.minecraft.mod.blockycooking.block.ModBlocks;
 import xyz.tcbuildmc.minecraft.mod.blockycooking.block.entity.machine.FishTrapBlockEntity;
 
 public class ModBlockEntityTypes {

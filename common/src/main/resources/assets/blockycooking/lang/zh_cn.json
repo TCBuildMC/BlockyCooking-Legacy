@@ -2,6 +2,8 @@
   "block.blockycooking.fish_trap": "捕鱼器",
   "container.blockycooking.fish_trap": "捕鱼器",
   "item.blockycooking.bread_crumb": "面包屑",
+  "item.blockycooking.raw_beef_skewer": "生牛肉串",
+  "item.blockycooking.roasted_beef_skewer": "烤牛肉串",
   "item.blockycooking.treasure_web": "捞宝藏的网",
   "itemGroup.blockycooking.main_group": "BlockyCooking 模组主物品组",
   "tooltip.blockycooking.fish_trap_bait.usage": "记得放进捕鱼器里面！"

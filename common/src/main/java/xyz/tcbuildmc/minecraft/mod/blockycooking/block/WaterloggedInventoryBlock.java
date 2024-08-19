@@ -1,4 +1,4 @@
-package xyz.tcbuildmc.minecraft.mod.blockycooking.block.machine;
+package xyz.tcbuildmc.minecraft.mod.blockycooking.block;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -14,10 +14,10 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.world.WorldAccess;
 import org.jetbrains.annotations.Nullable;
 
-public abstract class WaterloggedMachineBlock extends MachineBlock implements Waterloggable {
+public abstract class WaterloggedInventoryBlock extends InventoryBlock implements Waterloggable {
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
 
-    public WaterloggedMachineBlock(Settings settings) {
+    public WaterloggedInventoryBlock(Settings settings) {
         super(settings);
         setDefaultState(getDefaultState().with(WATERLOGGED, false));
     }

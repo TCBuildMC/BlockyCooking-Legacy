@@ -1,4 +1,4 @@
-package xyz.tcbuildmc.minecraft.mod.blockycooking.block.entity.machine;
+package xyz.tcbuildmc.minecraft.mod.blockycooking.block.entity;
 
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.Inventories;

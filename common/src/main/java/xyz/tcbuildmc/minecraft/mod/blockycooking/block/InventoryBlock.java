@@ -1,4 +1,4 @@
-package xyz.tcbuildmc.minecraft.mod.blockycooking.block.machine;
+package xyz.tcbuildmc.minecraft.mod.blockycooking.block;
 
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
@@ -18,12 +18,12 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
-import xyz.tcbuildmc.minecraft.mod.blockycooking.block.entity.machine.MachineBlockEntity;
+import xyz.tcbuildmc.minecraft.mod.blockycooking.block.entity.InventoryBlockEntity;
 
-public abstract class MachineBlock extends BlockWithEntity implements BlockEntityProvider {
+public abstract class InventoryBlock extends BlockWithEntity implements BlockEntityProvider {
     public static final DirectionProperty FACING = Properties.HORIZONTAL_FACING;
 
-    public MachineBlock(Settings settings) {
+    public InventoryBlock(Settings settings) {
         super(settings);
         setDefaultState(getDefaultState().with(FACING, Direction.NORTH));
     }
@@ -59,7 +59,7 @@ public abstract class MachineBlock extends BlockWithEntity implements BlockEntit
     public void onStateReplaced(BlockState state, World world, BlockPos pos, BlockState newState, boolean moved) {
         if (state.getBlock() != newState.getBlock()) {
             BlockEntity blockEntity = world.getBlockEntity(pos);
-            if (blockEntity instanceof MachineBlockEntity inventory) {
+            if (blockEntity instanceof InventoryBlockEntity inventory) {
                 ItemScatterer.spawn(world, pos, inventory);
                 world.updateComparators(pos, this);
             }
@@ -70,12 +70,6 @@ public abstract class MachineBlock extends BlockWithEntity implements BlockEntit
 
     @Override
     public void onPlaced(World world, BlockPos pos, BlockState state, LivingEntity placer, ItemStack itemStack) {
-        if (itemStack.hasCustomName()) {
-            BlockEntity blockEntity = world.getBlockEntity(pos);
-            if (blockEntity instanceof MachineBlockEntity nameable) {
-                nameable.setCustomName(itemStack.getName());
-            }
-        }
     }
 
     @Override
@@ -84,13 +78,12 @@ public abstract class MachineBlock extends BlockWithEntity implements BlockEntit
             return ActionResult.SUCCESS;
         }
 
-        BlockEntity blockEntity = world.getBlockEntity(pos);
-        if (blockEntity instanceof MachineBlockEntity factory) {
-            player.openHandledScreen(factory);
-        }
+        this.use(state, world, pos, player, hand, hit);
 
         return ActionResult.CONSUME;
     }
+
+    public abstract void use(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit);
 
     @Override
     public boolean hasComparatorOutput(BlockState state) {
@@ -113,5 +106,5 @@ public abstract class MachineBlock extends BlockWithEntity implements BlockEntit
                 blockEntity.tick(world1, pos, state1, blockEntity));
     }
 
-    public abstract BlockEntityType<? extends MachineBlockEntity> getBlockEntityTypeForTicking();
+    public abstract BlockEntityType<? extends InventoryBlockEntity> getBlockEntityTypeForTicking();
 }

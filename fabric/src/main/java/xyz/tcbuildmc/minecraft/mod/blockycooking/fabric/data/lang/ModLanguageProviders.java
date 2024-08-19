@@ -17,7 +17,8 @@ public class ModLanguageProviders {
 
             translationBuilder.add(ModItems.BREAD_CRUMB.get(), "Bread Crumbs");
             translationBuilder.add(ModItems.TREASURE_WEB.get(), "Treasure Web");
-//            translationBuilder.add(ModItems.FISH_TRAP.get(), "Fish Trap");
+            translationBuilder.add(ModItems.RAW_BEEF_SKEWER.get(), "Raw Beef Skewer");
+            translationBuilder.add(ModItems.ROASTED_BEEF_SKEWER.get(), "Roast Beef Skewer");
 
             translationBuilder.add("tooltip.blockycooking.fish_trap_bait.usage", "Remember to put this into the Fish Trap Block.");
 
@@ -38,7 +39,8 @@ public class ModLanguageProviders {
 
             translationBuilder.add(ModItems.BREAD_CRUMB.get(), "面包屑");
             translationBuilder.add(ModItems.TREASURE_WEB.get(), "捞宝藏的网");
-//            translationBuilder.add(ModItems.FISH_TRAP.get(), "捕鱼器");
+            translationBuilder.add(ModItems.RAW_BEEF_SKEWER.get(), "生牛肉串");
+            translationBuilder.add(ModItems.ROASTED_BEEF_SKEWER.get(), "烤牛肉串");
 
             translationBuilder.add("tooltip.blockycooking.fish_trap_bait.usage", "记得放进捕鱼器里面！");
 

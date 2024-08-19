@@ -2,6 +2,8 @@
   "block.blockycooking.fish_trap": "Fish Trap",
   "container.blockycooking.fish_trap": "Fish Trap",
   "item.blockycooking.bread_crumb": "Bread Crumbs",
+  "item.blockycooking.raw_beef_skewer": "Raw Beef Skewer",
+  "item.blockycooking.roasted_beef_skewer": "Roast Beef Skewer",
   "item.blockycooking.treasure_web": "Treasure Web",
   "itemGroup.blockycooking.main_group": "BlockyCooking Mod Main Item Group",
   "tooltip.blockycooking.fish_trap_bait.usage": "Remember to put this into the Fish Trap Block."

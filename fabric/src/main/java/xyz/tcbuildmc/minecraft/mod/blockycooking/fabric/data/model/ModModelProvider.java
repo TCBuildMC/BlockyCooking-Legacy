@@ -13,8 +13,7 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotatable(ModBlocks.FISH_TRAP.get(),
-                TextureMap.sideTopBottom(ModBlocks.FISH_TRAP.get()));
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotated(ModBlocks.FISH_TRAP.get(), TexturedModel.ORIENTABLE);
 
 //        blockStateModelGenerator.registerDispenserLikeOrientable();
     }
@@ -23,5 +22,7 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.TREASURE_WEB.get(), Models.GENERATED);
         itemModelGenerator.register(ModItems.BREAD_CRUMB.get(), Models.GENERATED);
+        itemModelGenerator.register(ModItems.RAW_BEEF_SKEWER.get(), Models.GENERATED);
+        itemModelGenerator.register(ModItems.ROASTED_BEEF_SKEWER.get(), Models.GENERATED);
     }
 }
