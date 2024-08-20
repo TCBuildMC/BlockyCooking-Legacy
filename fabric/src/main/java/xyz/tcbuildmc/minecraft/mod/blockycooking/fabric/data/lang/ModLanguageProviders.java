@@ -15,6 +15,14 @@ public class ModLanguageProviders {
         public void generateTranslations(TranslationBuilder translationBuilder) {
             translationBuilder.add(ModBlocks.FISH_TRAP.get(), "Fish Trap");
 
+            translationBuilder.add(ModBlocks.TEA_TREE_LOG.get(), "Tea Tree Log");
+            translationBuilder.add(ModBlocks.TEA_TREE_WOOD.get(), "Tea Tree Wood");
+            translationBuilder.add(ModBlocks.STRIPPED_TEA_TREE_LOG.get(), "Stripped Tea Tree Log");
+            translationBuilder.add(ModBlocks.STRIPPED_TEA_TREE_WOOD.get(), "Stripped Tea Tree Wood");
+            translationBuilder.add(ModBlocks.TEA_TREE_PLANK.get(), "Tea Tree Plank");
+            translationBuilder.add(ModBlocks.TEA_TREE_LEAVES.get(), "Tea Tree Leaves");
+            translationBuilder.add(ModBlocks.TEA_TREE_SAPLING.get(), "Tea Tree Sapling");
+
             translationBuilder.add(ModItems.BREAD_CRUMB.get(), "Bread Crumbs");
             translationBuilder.add(ModItems.TREASURE_WEB.get(), "Treasure Web");
             translationBuilder.add(ModItems.RAW_BEEF_SKEWER.get(), "Raw Beef Skewer");
@@ -36,6 +44,14 @@ public class ModLanguageProviders {
         @Override
         public void generateTranslations(TranslationBuilder translationBuilder) {
             translationBuilder.add(ModBlocks.FISH_TRAP.get(), "捕鱼器");
+
+            translationBuilder.add(ModBlocks.TEA_TREE_LOG.get(), "茶树原木");
+            translationBuilder.add(ModBlocks.TEA_TREE_WOOD.get(), "茶树树木");
+            translationBuilder.add(ModBlocks.STRIPPED_TEA_TREE_LOG.get(), "去皮的茶树原木");
+            translationBuilder.add(ModBlocks.STRIPPED_TEA_TREE_WOOD.get(), "去皮的茶树树木");
+            translationBuilder.add(ModBlocks.TEA_TREE_PLANK.get(), "茶树木板");
+            translationBuilder.add(ModBlocks.TEA_TREE_LEAVES.get(), "茶树树叶");
+            translationBuilder.add(ModBlocks.TEA_TREE_SAPLING.get(), "茶树树苗");
 
             translationBuilder.add(ModItems.BREAD_CRUMB.get(), "面包屑");
             translationBuilder.add(ModItems.TREASURE_WEB.get(), "捞宝藏的网");

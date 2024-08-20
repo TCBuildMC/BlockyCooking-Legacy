@@ -7,6 +7,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import xyz.tcbuildmc.minecraft.mod.blockycooking.block.entity.ModBlockEntityTypes;
 import xyz.tcbuildmc.minecraft.mod.blockycooking.block.ModBlocks;
+import xyz.tcbuildmc.minecraft.mod.blockycooking.client.block.ModBlockRenderLayerMaps;
 import xyz.tcbuildmc.minecraft.mod.blockycooking.client.block.entity.renderer.ModBlockEntityRenderers;
 import xyz.tcbuildmc.minecraft.mod.blockycooking.client.screen.ModScreens;
 import xyz.tcbuildmc.minecraft.mod.blockycooking.entity.ModEntityTypes;
@@ -19,6 +20,7 @@ import xyz.tcbuildmc.minecraft.mod.blockycooking.screen.ModScreenHandlerTypes;
 import xyz.tcbuildmc.minecraft.mod.blockycooking.stat.ModCustomStats;
 import xyz.tcbuildmc.minecraft.mod.blockycooking.tag.ModTags;
 import xyz.tcbuildmc.minecraft.mod.blockycooking.villager.ModVillagerTrades;
+import xyz.tcbuildmc.minecraft.mod.blockycooking.world.generation.ModWorldGeneration;
 
 public final class BlockyCooking {
     public static final String MOD_ID = "blockycooking";
@@ -38,6 +40,7 @@ public final class BlockyCooking {
         ModItemGroups.register();
 
         ModTags.register();
+        ModWorldGeneration.register();
         ModVillagerTrades.register();
         ModRecipeSerializers.register();
         ModRecipeTypes.register();
@@ -51,5 +54,6 @@ public final class BlockyCooking {
 //        });
         ModScreens.register();
         ModBlockEntityRenderers.register();
+        ModBlockRenderLayerMaps.register();
     }
 }

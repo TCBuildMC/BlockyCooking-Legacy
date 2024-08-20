@@ -1,5 +1,12 @@
 {
   "block.blockycooking.fish_trap": "捕鱼器",
+  "block.blockycooking.stripped_tea_tree_log": "去皮的茶树原木",
+  "block.blockycooking.stripped_tea_tree_wood": "去皮的茶树树木",
+  "block.blockycooking.tea_tree_leaves": "茶树树叶",
+  "block.blockycooking.tea_tree_log": "茶树原木",
+  "block.blockycooking.tea_tree_plank": "茶树木板",
+  "block.blockycooking.tea_tree_sapling": "茶树树苗",
+  "block.blockycooking.tea_tree_wood": "茶树树木",
   "container.blockycooking.fish_trap": "捕鱼器",
   "item.blockycooking.bread_crumb": "面包屑",
   "item.blockycooking.raw_beef_skewer": "生牛肉串",

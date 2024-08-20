@@ -15,6 +15,7 @@ loom {
         extraAccessWideners.add loom.accessWidenerPath.get().asFile.name
 
         mixinConfig "blockycooking.mixins.json"
+        mixinConfig "blockycooking-forge.mixins.json"
     }
 }
 

@@ -2,12 +2,17 @@ package xyz.tcbuildmc.minecraft.mod.blockycooking.fabric.data;
 
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
+import net.minecraft.registry.RegistryBuilder;
+import net.minecraft.registry.RegistryKeys;
 import xyz.tcbuildmc.minecraft.mod.blockycooking.fabric.data.advancement.ModAdvancementProvider;
 import xyz.tcbuildmc.minecraft.mod.blockycooking.fabric.data.lang.ModLanguageProviders;
 import xyz.tcbuildmc.minecraft.mod.blockycooking.fabric.data.loot.ModLootTableProviders;
 import xyz.tcbuildmc.minecraft.mod.blockycooking.fabric.data.model.ModModelProvider;
 import xyz.tcbuildmc.minecraft.mod.blockycooking.fabric.data.recipe.ModRecipeProvider;
+import xyz.tcbuildmc.minecraft.mod.blockycooking.fabric.data.registry.ModDynamicRegistryProvider;
 import xyz.tcbuildmc.minecraft.mod.blockycooking.fabric.data.tag.ModTagProviders;
+import xyz.tcbuildmc.minecraft.mod.blockycooking.world.feature.configured.ModConfiguredFeatures;
+import xyz.tcbuildmc.minecraft.mod.blockycooking.world.feature.placed.ModPlacedFeatures;
 
 public final class BlockCookingFabricDatagen implements DataGeneratorEntrypoint {
     @Override
@@ -33,5 +38,13 @@ public final class BlockCookingFabricDatagen implements DataGeneratorEntrypoint 
 
         // Advancement
         pack.addProvider(ModAdvancementProvider::new);
+
+        pack.addProvider(ModDynamicRegistryProvider::new);
+    }
+
+    @Override
+    public void buildRegistry(RegistryBuilder registryBuilder) {
+        registryBuilder.addRegistry(RegistryKeys.CONFIGURED_FEATURE, ModConfiguredFeatures::bootstrap);
+        registryBuilder.addRegistry(RegistryKeys.PLACED_FEATURE, ModPlacedFeatures::bootstrap);
     }
 }

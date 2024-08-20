@@ -6,15 +6,14 @@ A Minecraft mod about farming and cooking.
 Be based on the vanilla Minecraft :(
 
 ## Versions
-| Minecraft Version | Supported Loaders                            | Status    | Latest Version | Current Branch |
-|-------------------|----------------------------------------------|-----------|----------------|----------------|
-| 1.21.x            | Fabric, NeoForge                             | In Plan ❌ | -              | -              |
-| 1.20.x            | Fabric, Forge (1.20[.1]), NeoForge (1.20.2+) | WIP ⚠️    | 1.0.0-alpha.*  | 1.20           |
-| 1.19.x            | Fabric, Forge                                | In Plan ❌ | -              | -              |
-| 1.18.x            | Fabric, Forge                                | In Plan ❌ | -              | -              |
-| 1.16.x            | Fabric, Forge                                | In Plan ❌ | -              | -              |
-
-**We do not support Minecraft 1.12 and down. Please do not ask us again.**
+| Minecraft Version                    | Supported Loaders       | Status    | Latest Version | Git Branch |
+|--------------------------------------|-------------------------|-----------|----------------|------------|
+| 1.21.x                               | Fabric, NeoForge        | In Plan ❌ | -              | 1.21       |
+| 1.20.5 ~ 1.20.6                      | Fabric, NeoForge        | In Plan ❌ | -              | 1.20.6     |
+| 1.20.2 ~ 1.20.4                      | Fabric, Forge, NeoForge | In Plan ❌ | -              | 1.20.4     |
+| 1.20 ~ 1.20.1 (Main Develop Version) | Fabric, Forge, NeoForge | WIP ⚠️    | 1.0.0-alpha.*  | 1.20       |
+| 1.19.x                               | Fabric, Forge           | In Plan ❌ | -              | 1.19       |
+| 1.18.x                               | Fabric, Forge           | In Plan ❌ | -              | 1.18       |
 
 ## Dependencies
 

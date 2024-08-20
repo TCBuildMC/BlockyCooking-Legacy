@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "blockycooking:tea_tree_log",
+    "blockycooking:tea_tree_wood",
+    "blockycooking:stripped_tea_tree_log",
+    "blockycooking:stripped_tea_tree_wood"
+  ]
+}

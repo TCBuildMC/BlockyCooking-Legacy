@@ -6,7 +6,6 @@
   "client": [
   ],
   "mixins": [
-    "access.ScreenHandlerAccessor"
   ],
   "injectors": {
     "defaultRequire": 1

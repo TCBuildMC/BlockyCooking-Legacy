@@ -90,6 +90,7 @@ forgix {
 //        additionalRelocate "org.my.lib.another" "forge.org.my.lib.another"
 
         mixin "blockycooking.mixins.json"
+        mixin "blockycooking-forge.mixins.json"
     }
 
 //    neoforge {

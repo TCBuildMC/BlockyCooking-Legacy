@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "blockycooking:block/stripped_tea_tree_log_top",
+    "side": "blockycooking:block/stripped_tea_tree_log"
+  }
+}

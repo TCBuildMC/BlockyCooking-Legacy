@@ -1,5 +1,12 @@
 {
   "block.blockycooking.fish_trap": "Fish Trap",
+  "block.blockycooking.stripped_tea_tree_log": "Stripped Tea Tree Log",
+  "block.blockycooking.stripped_tea_tree_wood": "Stripped Tea Tree Wood",
+  "block.blockycooking.tea_tree_leaves": "Tea Tree Leaves",
+  "block.blockycooking.tea_tree_log": "Tea Tree Log",
+  "block.blockycooking.tea_tree_plank": "Tea Tree Plank",
+  "block.blockycooking.tea_tree_sapling": "Tea Tree Sapling",
+  "block.blockycooking.tea_tree_wood": "Tea Tree Wood",
   "container.blockycooking.fish_trap": "Fish Trap",
   "item.blockycooking.bread_crumb": "Bread Crumbs",
   "item.blockycooking.raw_beef_skewer": "Raw Beef Skewer",

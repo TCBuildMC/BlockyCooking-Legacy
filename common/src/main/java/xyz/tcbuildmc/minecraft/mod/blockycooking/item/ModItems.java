@@ -31,6 +31,14 @@ public class ModItems {
     public static final RegistrySupplier<Item> RAW_MUTTON_SKEWER;
     public static final RegistrySupplier<Item> ROASTED_MUTTON_SKEWER;
 
+    public static final RegistrySupplier<Item> TEA_TREE_LOG;
+    public static final RegistrySupplier<Item> TEA_TREE_WOOD;
+    public static final RegistrySupplier<Item> STRIPPED_TEA_TREE_LOG;
+    public static final RegistrySupplier<Item> STRIPPED_TEA_TREE_WOOD;
+    public static final RegistrySupplier<Item> TEA_TREE_PLANK;
+    public static final RegistrySupplier<Item> TEA_TREE_LEAVES;
+    public static final RegistrySupplier<Item> TEA_TREE_SAPLING;
+
     static {
         FISH_TRAP = ITEMS.register("fish_trap", () -> new BlockItem(ModBlocks.FISH_TRAP.get(),
                 new Item.Settings().maxCount(64).arch$tab(ModItemGroups.MAIN_GROUP)));
@@ -42,10 +50,24 @@ public class ModItems {
                 new Item.Settings().maxCount(64).food(ModFoodComponents.RAW_BEEF_SKEWER).arch$tab(ModItemGroups.MAIN_GROUP)));
         ROASTED_BEEF_SKEWER = ITEMS.register("roasted_beef_skewer", () -> new Item(
                 new Item.Settings().maxCount(64).food(ModFoodComponents.ROASTED_BEEF_SKEWER).arch$tab(ModItemGroups.MAIN_GROUP)));
-        RAW_MUTTON_SKEWER = ITEMS.register("raw_beef_skewer", () -> new Item(
+        RAW_MUTTON_SKEWER = ITEMS.register("raw_mutton_skewer", () -> new Item(
                 new Item.Settings().maxCount(64).food(ModFoodComponents.RAW_MUTTON_SKEWER).arch$tab(ModItemGroups.MAIN_GROUP)));
-        ROASTED_MUTTON_SKEWER = ITEMS.register("roasted_beef_skewer", () -> new Item(
+        ROASTED_MUTTON_SKEWER = ITEMS.register("roasted_mutton_skewer", () -> new Item(
                 new Item.Settings().maxCount(64).food(ModFoodComponents.ROASTED_MUTTON_SKEWER).arch$tab(ModItemGroups.MAIN_GROUP)));
+        TEA_TREE_LOG = ITEMS.register("tea_tree_log", () -> new BlockItem(ModBlocks.TEA_TREE_LOG.get(),
+                new Item.Settings().maxCount(64).arch$tab(ModItemGroups.MAIN_GROUP)));
+        TEA_TREE_WOOD = ITEMS.register("tea_tree_wood", () -> new BlockItem(ModBlocks.TEA_TREE_WOOD.get(),
+                new Item.Settings().maxCount(64).arch$tab(ModItemGroups.MAIN_GROUP)));
+        STRIPPED_TEA_TREE_LOG = ITEMS.register("stripped_tea_tree_log", () -> new BlockItem(ModBlocks.STRIPPED_TEA_TREE_LOG.get(),
+                new Item.Settings().maxCount(64).arch$tab(ModItemGroups.MAIN_GROUP)));
+        STRIPPED_TEA_TREE_WOOD = ITEMS.register("stripped_tea_tree_wood", () -> new BlockItem(ModBlocks.STRIPPED_TEA_TREE_WOOD.get(),
+                new Item.Settings().maxCount(64).arch$tab(ModItemGroups.MAIN_GROUP)));
+        TEA_TREE_PLANK = ITEMS.register("tea_tree_plank", () -> new BlockItem(ModBlocks.TEA_TREE_PLANK.get(),
+                new Item.Settings().maxCount(64).arch$tab(ModItemGroups.MAIN_GROUP)));
+        TEA_TREE_LEAVES = ITEMS.register("tea_tree_leaves", () -> new BlockItem(ModBlocks.TEA_TREE_LEAVES.get(),
+                new Item.Settings().maxCount(64).arch$tab(ModItemGroups.MAIN_GROUP)));
+        TEA_TREE_SAPLING = ITEMS.register("tea_tree_sapling", () -> new BlockItem(ModBlocks.TEA_TREE_SAPLING.get(),
+                new Item.Settings().maxCount(64).arch$tab(ModItemGroups.MAIN_GROUP)));
     }
 
     public static void register() {

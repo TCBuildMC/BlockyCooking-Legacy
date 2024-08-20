@@ -2,3 +2,6 @@ accessWidener   v2  named
 accessible method net/minecraft/block/Blocks createLightLevelFromLitBlockState (I)Ljava/util/function/ToIntFunction;
 accessible class net/minecraft/recipe/CookingRecipeSerializer$RecipeFactory
 accessible method net/minecraft/data/server/recipe/CookingRecipeJsonBuilder <init> (Lnet/minecraft/recipe/book/RecipeCategory;Lnet/minecraft/recipe/book/CookingRecipeCategory;Lnet/minecraft/item/ItemConvertible;Lnet/minecraft/recipe/Ingredient;FILnet/minecraft/recipe/RecipeSerializer;)V
+accessible method net/minecraft/screen/ScreenHandler addSlot (Lnet/minecraft/screen/slot/Slot;)Lnet/minecraft/screen/slot/Slot;
+accessible field net/minecraft/item/AxeItem STRIPPED_BLOCKS Ljava/util/Map;
+mutable field net/minecraft/item/AxeItem STRIPPED_BLOCKS Ljava/util/Map;

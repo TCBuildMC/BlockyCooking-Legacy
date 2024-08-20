@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "blockycooking:block/tea_tree_wood",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "blockycooking:block/tea_tree_wood"
+    },
+    "axis=z": {
+      "model": "blockycooking:block/tea_tree_wood",
+      "x": 90
+    }
+  }
+}

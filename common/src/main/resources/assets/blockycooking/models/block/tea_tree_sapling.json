@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "blockycooking:block/tea_tree_sapling"
+  }
+}
